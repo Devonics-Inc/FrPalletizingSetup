@@ -120,3 +120,5 @@ Start by first hooking up your solution
 - Now, when you click calculate, you can see the offsets of your new extended axis coordinate system. Click save and the check mark in the top of the window to save it. In the web app, you can view a visual representation of the axis by clicking the Extended Axis coordinate button on the top row of the view window.
 
 - NOTE: This coordinate system will change the way you give points offsets in PTP and linear movements. Typically, in this example, the X axis will be vertical meaning to do a vertical offset, you'll need to give it an offset in the dx field.
+
+- NOTE2: If your extended axis direction is flipped, modify the value of register H02-02. To edit, ensure the rail is disabled. After editing, you must power cycle the solution.
