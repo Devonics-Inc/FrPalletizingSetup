@@ -101,6 +101,7 @@ Start by first hooking up your solution
 
 - NOTE: This coordinate system will change the way you give points offsets in PTP and linear movements. Typically, in this example, the X axis will be vertical meaning to do a vertical offset, you'll need to give it an offset in the dx field.
 
+<<<<<<< HEAD
 ## Notes for developers:
 ### Using the Fairino palletizing software
 - When using the Fairino palletizing software, a common error developers run into when setting the parameters for the recipe is "No data for reference point".
@@ -110,3 +111,6 @@ Start by first hooking up your solution
 <img src="image-1.png" width="800"/>
 
 - Note that this will serve as your home/pickup position for your palletizing program. After setting this point, you will be able to create the rest of your recipe
+=======
+- NOTE2: If your extended axis direction is flipped, modify the value of register H02-02. To edit, ensure the rail is disabled. After editing, you must power cycle the solution.
+>>>>>>> 24831c8e3e932481d25aa75a236ccebd61eda741
