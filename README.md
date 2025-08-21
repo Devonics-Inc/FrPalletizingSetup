@@ -43,7 +43,9 @@ Start by first hooking up your solution
  - Navigate to "Initial"->"Base"->"Coordinate"->"Ext. Axis"
  - Select extaxis1
  - Click edit, select "param config" and enter the following values: 
- ![alt text](image.png)[size=.20]
+
+<img src="image.png" width="200" justify="left"/>
+
  - Click save and then the check mark at the top
  - Now you're good to go!
 
@@ -55,68 +57,56 @@ Start by first hooking up your solution
     - For point 1, navigate to the coordinate move tab in the main page of the web app (the bottom of the 4 icons on the left of the view window)
     - Set your Rail to 0 and enter the following coordinates:
         Point 1
-        
-        X 855
-        
-        Y 0
-        
-        Z 0
-        
-        RX 180
-        
-        RY 0
-        
-        RZ -180
+
+            X: 855
+            Y: 0
+            Z: 0
+            RX: 180
+            RY: 0
+            RZ: -180
     
     - For Point 2, Move the coordinates to the following:
         Point 2:
 
-        X 855
-
-        Y 0
-
-        Z 0
-
-        RX 135
-
-        RY 0
-
-        RZ -135
+            X: 855
+            Y: 0
+            Z: 0
+            RX: 135
+            RY: 0
+            RZ: -135
 
     - For Point 3, You'll need to move your rail up 100mm while moving the robot down 100mm on the Z-axis
         Point 3:
         
-        X 855
-        
-        Y 0
-        
-        Z  -100
-        
-        RX 180
-        
-        RY 0
-        
-        RZ -180
-        
-        Ext Axis: 100mm
+            X: 855
+            Y: 0
+            Z: -100
+            RX: 180
+            RY: 0
+            RZ: -180
+            Ext Axis: 100mm
 
     - For point 4, first move your rail back to 0 and your robot back to 0 on the Z axis. Then, move the center point of your TCP in an axis perpendicular to your rail. In the case of a vertical rail, we move our robot in Y positive: 
         Point 4:
 
-        X 855
-        
-        Y 100
-        
-        Z 0
-        
-        RX 180
-        
-        RY 0
-        
-        RZ -180
-        
-        Ext Axis: 0mm
+            X: 855
+            Y: 100
+            Z: 0
+            RX: 180
+            RY: 0
+            RZ: -180
+            Ext Axis: 0mm
 
 - Now, when you click calculate, you can see the offsets of your new extended axis coordinate system. Click save and the check mark in the top of the window to save it. In the web app, you can view a visual representation of the axis by clicking the Extended Axis coordinate button on the top row of the view window.
 
 - NOTE: This coordinate system will change the way you give points offsets in PTP and linear movements. Typically, in this example, the X axis will be vertical meaning to do a vertical offset, you'll need to give it an offset in the dx field.
+
+## Notes for developers:
+### Using the Fairino palletizing software
+- When using the Fairino palletizing software, a common error developers run into when setting the parameters for the recipe is "No data for reference point".
+
+- This can be solved by navigating to "Application -> Tool App -> Home Point" and clicking "set" (shown below)
+
+<img src="image-1.png" width="800"/>
+
+- Note that this will serve as your home/pickup position for your palletizing program. After setting this point, you will be able to create the rest of your recipe
