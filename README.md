@@ -113,3 +113,6 @@ Start by first hooking up your solution
 
 ### Extended Axis Offset
 - If your extended axis direction is flipped, modify the value of register H02-02. To edit, ensure the rail is disabled. After editing, you must power cycle the solution.
+
+### Extended axis "Out of Soft Limit" Error:
+- Sometimes, the extended axis will read the palletizers position as a very extreme value that is out of the soft limit range. To fix this, you must first unplug the PLC and set the web app to not be configured for an extended axis. Then, reset all the values in the configuration tab to the values shown in the image at the end of step 3. Now, turn off the solution, reset your PLC connection and you'll see that value return to normal!
