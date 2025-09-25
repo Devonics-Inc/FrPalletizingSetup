@@ -49,7 +49,12 @@ Start by first hooking up your solution
  - Click save and then the check mark at the top
  - Now you're good to go!
 
-## OPTIONAL Step 4: Setting up the Extended Axis coordinate system for synchronous movement
+## Step 4: Activating the suction gripper
+- If you've used the set ip instructions attached, you should be able to control your gripper using the PLC IO control:
+
+    SetAuxDO(4, 0, 0, 0)
+
+## OPTIONAL Step 5: Setting up the Extended Axis coordinate system for synchronous movement
 - When setting up your extended axis, you can calibrate the extended axis to allow synchronous movement of the rail and the robot.
 - After following the steps above, navigate to "Initial"->"Base"->"Coordinate"->"Ext. Axis"
 - Click on the "Edit" button (notepad with a pencil icon) and towards the bottom, double click "Clear" then click "calibrate"
