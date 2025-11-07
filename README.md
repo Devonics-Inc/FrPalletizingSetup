@@ -14,7 +14,7 @@ If you run into problems not mentioned on this repo, try looking at the Inovance
 
 
 ## Step 1: Putting your solution together:
-Start by first hooking up your solution 
+Start by first hooking up your solution by following the steps provided in the links above
 
 ## Step 2: Set up Encoder
 - When setting up the rail, you may get communication errors on the encoder that read E731.0
@@ -23,7 +23,7 @@ Start by first hooking up your solution
     2) Use the up/down arrows to adjust the values of the register until you see get "h0d.20" and press "set"
     3) Here, you should see a blinking "0". You'll need to set that to "1"  (using the up arrow) press set and then power cycle.
 ## Step 3: Communicating the robot to the rail:
-- The provided code should have the propper UDP set up, but you'll need to give it the values the first time you set it up. Screen shots of the correct parameters can be found in this repo.
+- The provided code should have the propper UDP set up, but you'll need to give it the values the first time you set it up. Screen shots of the correct parameters can be found in this repo. BEFORE CHANGING YOUR EXTENDED AXIS FROM 0 TO 1, MAKE THE CHANGES BELOW:
  - In "Initial"->"Peripheral"->"Ext. Axis" select Ext. Axis + UDP.
  - Change exaxis number to 1
  - Edit the "Communication config" to have the following values:
@@ -49,6 +49,15 @@ Start by first hooking up your solution
  - Click save and then the check mark at the top
  - Now you're good to go!
 
+
+## Step 3b: Disabling the rail break
+- After aftivating and enabling the rail, you must diable the break before moving it. The break of the rail is linked to AuxDO 5. To disable, run the following command:
+  
+      SetAuxDO(5,1,0,0)
+- To enable the break, use:
+
+      SetAuxDO(5,0,0,0)
+  
 ## Step 4: Activating the suction gripper
 - If you've used the set ip instructions attached, you should be able to control your gripper using the PLC IO control:
 
